@@ -1,0 +1,10 @@
+streamlit-desktop-app
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+openai
+langdetect
+sumy
+nltk
+qrcode[pil]

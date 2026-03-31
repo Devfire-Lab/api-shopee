@@ -1,0 +1,35 @@
+1) Instalação mínima (Python + pip)
+python.exe -m pip install --upgrade pip
+pip install python-slugify
+Se o usuário ainda não tiver Python instalado, peça para baixar em python.org e marque a opção “Add Python to PATH” .
+
+2) Interface de Área de Trabalho (Streamlit Desktop)
+pip install streamlit-desktop-app
+Isso permite rodar seu app Streamlit como um app desktop, útil para o usuário não precisar abrir o navegador.
+
+3) Automação da API do Blogger (Google)
+pip install google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
+Essas bibliotecas são permitidas para:
+Autenticar com o Google (OAuth2).
+Usar a API do Blogger para criar/editar postagens automaticamente.
+Depois você vai precisar de um credenciais.json (feito no Google Cloud Console) e salvar no projeto.
+
+4) Integração com IA (OpenAI + ChatGPT)
+pip install openai
+
+5) Processamento de texto (detecção de idioma, sumarização, PNL)
+pip install langdetect sumy nltk
+langdetect: detectar idioma do texto.
+
+
+6) Geração de QR Code
+pip install qrcode[pil]
+
+
+OU MANDA INSTALAR TUDO DE UMA VEZ:
+pip install -r requirements.txt
+
+*************************************
+Iniciar o App_Inicio.py com botão run
+ou
+streamlit run App_Streamlit.py
