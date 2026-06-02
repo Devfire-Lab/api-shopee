@@ -26,8 +26,8 @@ def chave_api_shopee_afiliado():
             • SECRET_KEY
       5. Cole aqui no código (não compartilhe com ninguém!).
     """
-    APP_ID = "1893636400007"          # ID do aplicativo afiliado da Shopee
-    SECRET_KEY = "TRTKRZB7VFVTC757U6JCIFL3G7YYHBDZNV"  # Chave secreta da API
+    APP_ID = "18323300326"          # ID do aplicativo afiliado da Shopee
+    SECRET_KEY = "L3Y44MMVH3E4HY4XPLSDXRW2LD7F5SQY"  # Chave secreta da API
 
     return APP_ID, SECRET_KEY
 
@@ -45,7 +45,7 @@ def chave_api_blogger_AQUI_ACHEI():
       4. O número depois de "blogID=" é o blog_id.
       5. Cole no lugar do valor abaixo.
     """
-    blog_id_AQUI_ACHEI = '3695058109147479032'  # ID do blog "Aqui Achei"
+    blog_id_AQUI_ACHEI = '18323300326'  # ID do blog "Aqui Achei"
     return blog_id_AQUI_ACHEI
 
 
@@ -54,7 +54,7 @@ def chave_api_blogger_ACHEI_TOP():
     Retorna o ID do outro blog: "Achei Top".
     Só repita o mesmo processo do comentário acima para esse blog.
     """
-    blog_id_ACHEI_TOP = '413958215810482139'  # ID do blog "Achei Top"
+    blog_id_ACHEI_TOP = '5715345972014270232'  # ID do blog "Achei Top"
     return blog_id_ACHEI_TOP
 
 
