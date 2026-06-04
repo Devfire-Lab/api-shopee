@@ -11,8 +11,9 @@ from Minhas_Chaves_Api import chave_api_shopee_afiliado
 # ===============================
 # CONFIGURAÇÃO DA API
 
-APP_ID = chave_api_shopee_afiliado()[0]
-SECRET_KEY = chave_api_shopee_afiliado()[1]
+APP_ID, SECRET_KEY = chave_api_shopee_afiliado()
+
+
 URL = "https://open-api.affiliate.shopee.com.br/graphql"
 
 def sign(app_id, timestamp, body, secret):

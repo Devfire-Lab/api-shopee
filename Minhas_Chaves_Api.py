@@ -93,8 +93,7 @@ def chave_gpt():
       - Considere usar um arquivo .env ou variáveis de ambiente na versão final.
     """
     keys = {
-       "AlgunsCod": "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",
-       "Relachado": "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",
+       "api-shopee-openai": "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",
     }
 
     return keys
