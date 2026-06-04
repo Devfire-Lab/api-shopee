@@ -11,8 +11,14 @@ from Minhas_Chaves_Api import chave_api_shopee_afiliado
 # ===============================
 # CONFIGURAÇÃO DA API
 
-APP_ID, SECRET_KEY = chave_api_shopee_afiliado()
+# Carrega as chaves
+chaves = chave_api_shopee_afiliado()
 
+if chaves is None or len(chaves) < 2:
+    raise ValueError("❌ Chaves da Shopee não foram carregadas!")
+
+APP_ID = chaves[0]
+SECRET_KEY = chaves[1]
 
 URL = "https://open-api.affiliate.shopee.com.br/graphql"
 
@@ -489,3 +495,14 @@ def Api_Shopee_LOOP_INFINITO(st):
                     st.warning(f'{i[0]}, {i[1]}, {i[2]} Já em SITES')
 
     st.markdown("---")
+
+
+
+
+
+
+
+
+
+
+

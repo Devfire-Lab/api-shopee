@@ -9,7 +9,9 @@
 # ---------------------------------------------------------------------------
 
 
+
 def chave_api_shopee_afiliado():
+
     """
     Retorna as credenciais da API do Programa de Afiliados da Shopee.
     Elas são usadas para:
@@ -26,10 +28,12 @@ def chave_api_shopee_afiliado():
             • SECRET_KEY
       5. Cole aqui no código (não compartilhe com ninguém!).
     """
-    APP_ID = "18323300326"          # ID do aplicativo afiliado da Shopee
-    SECRET_KEY = "L3Y44MMVH3E4HY4XPLSDXRW2LD7F5SQY"  # Chave secreta da API
 
-    return APP_ID, SECRET_KEY
+    keys = {
+        "app_id": "18323300326",
+        "app_secret": "L3Y44MMVH3E4HY4XPLSDXRW2LD7F5SQY",
+    }
+    return [keys["app_id"], keys["app_secret"]]
 
 
 def chave_api_blogger_AQUI_ACHEI():
