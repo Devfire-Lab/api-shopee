@@ -228,9 +228,10 @@ def Api_Shopee(st):
                 )
                 col_a, col_b = st.columns(2)
                 col_b.markdown(f"Loja: **{i[4].strip()}**")
-                nome1, link1 = ler_A_CAT(col_b, i[5])
-                nome2, link2 = ler_A_CAT(col_b, i[6])
-
+                
+                nome1, link1 = ler_A_CAT(col_b, i[5], item_id=f"{i[0]}_cat1")
+                nome2, link2 = ler_A_CAT(col_b, i[6], item_id=f"{i[0]}_cat2")
+                
                 if nome1 != None:
                     col_b.markdown(
                         f'<a href="{link1}" target="_blank">'

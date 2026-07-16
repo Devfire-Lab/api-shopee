@@ -1,3 +1,4 @@
+import streamlit as st
 import os
 import sqlite3
 from pathlib import Path
@@ -42,7 +43,7 @@ def ler_A_CAT_temp(ID):
     else:
         return ID,''
 
-def ler_A_CAT(st,ID):
+def ler_A_CAT(conn, ID, item_id=""):
     c.execute(
         F"SELECT TITULO, LINK FROM A_CATEGORIAS WHERE ID_CAT = '{ID}' ")
     result = c.fetchall()
@@ -61,10 +62,11 @@ def ler_A_CAT(st,ID):
                         st.error('link errado!')
             return None,None
     else:      
-        TITULO = st.text_input(f'Nome: {ID}', key = f"txt_cat_{ID}_{i[0] if 'i' in locals() else ''}")
-        
-        LINK = st.text_input(f'Link: {ID}',key = ID)
-        if st.button(f'Cadastra: {ID}',key = int(ID)+2):
+        TITULO = st.text_input(f'Nome: {ID}', key = f"txt_cat_{ID}_{item_id}")
+        LINK = st.text_input(f'Link: {ID}', key = f"txt_link_{ID}_{item_id}")
+
+        if st.button(f'Cadastra: {ID}', key = f"btn_cadastra_{ID}_{item_id}"):
+
             if TITULO and LINK:
                 if 'https' in LINK:
                     esc_A_CATEGORIAS(ID, TITULO, LINK, 'OUTROS')
