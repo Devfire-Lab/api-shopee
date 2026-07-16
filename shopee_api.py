@@ -53,6 +53,11 @@ def buscar_produtos(keyword, listType, sort_type, page, limit):
         "Authorization": f"SHA256 Credential={APP_ID},Timestamp={timestamp},Signature={signature}"
     }
     try:
+        print("============ [TRACE EM TEMPO REAL DONI]====================") 
+        print("[+] URL REAL DE DESTINO:", URL)
+        print("[+] HEADERS ENVIADOS:", json.dumps(headers, indent=2))
+        print("[+] BODY ENVIADO:", body)
+        print("====================================================")
         resp = requests.post(URL, headers=headers, data=body, timeout=30)
         return resp.json()
     except Exception as e:
@@ -84,6 +89,12 @@ def GERAR_link_afiliado(shopee_url: str):
         "Authorization": f"SHA256 Credential={APP_ID},Timestamp={timestamp},Signature={signature}"
     }
 
+    print("============== [TRACE EM TEMPO REAL DONI] =============")
+    print("[+] URL REAL DE DESTINO:", URL)
+    print("[+] HEADERS ENVIADOS:", json.dumps(headers, indent=2))
+    print("[+] BODY ENVIADO:", body)
+    print("=====================================================")
+    
     resp = requests.post(URL, headers=headers, data=body, timeout=30)
     short_link = resp.json()["data"]["generateShortLink"]["shortLink"]
 

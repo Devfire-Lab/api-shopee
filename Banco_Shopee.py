@@ -60,8 +60,9 @@ def ler_A_CAT(st,ID):
                     else:
                         st.error('link errado!')
             return None,None
-    else:
-        TITULO = st.text_input(f'Nome: {ID}',key = int(ID)+1)
+    else:      
+        TITULO = st.text_input(f'Nome: {ID}', key = f"txt_cat_{ID}_{i[0] if 'i' in locals() else ''}")
+        
         LINK = st.text_input(f'Link: {ID}',key = ID)
         if st.button(f'Cadastra: {ID}',key = int(ID)+2):
             if TITULO and LINK:
