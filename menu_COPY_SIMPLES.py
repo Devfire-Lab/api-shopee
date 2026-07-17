@@ -181,14 +181,21 @@ Liste exatamente como fornecido.
 		IMAGEM_1 = image_input(c1,c2, "CAPA DE INTRO")
 
 		# --------------------------------------------------------------
-
 	st1, st2 = st.columns(2)
 
 	st1.text_input("Link Imagem a ser Enviada",IMAGEM_1)
 	LINK_AFILIADO = st1.text_input("Link Afiliado",link_afiliad)
 
-	cat2 = categoria.replace('[','').replace(']','').split(',')[0]
-	cat3 = categoria.replace('[','').replace(']','').split(',')[1]
+	# 🛠️ CORREÇÃO CIRÚRGICA CONTRA VALOR NULO (KISS)
+	if categoria:
+		cat_limpa = categoria.replace('[','').replace(']','')
+		partes_cat = [c.strip() for c in cat_limpa.split(',') if c.strip()]
+		cat2 = partes_cat[0] if len(partes_cat) > 0 else "Geral"
+		cat3 = partes_cat[1] if len(partes_cat) > 1 else "Diversos"
+	else:
+		cat2 = "Geral"
+		cat3 = "Diversos"
+
 	st1.code(f"Categoria Principal: {cat2} , {cat3}")
 
 	IMAGEM = st2.text_input("Link da Imagem",IMAGEM_1)

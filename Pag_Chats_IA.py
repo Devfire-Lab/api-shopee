@@ -1,9 +1,9 @@
 import json
 import re
 import subprocess
-
-from openai import OpenAI
-from openai import OpenAIError, RateLimitError
+import traceback
+import requests
+from datetime import datetime
 import streamlit as st
 
 from Function import Caves_Pri
@@ -11,45 +11,62 @@ from Minhas_Chaves_Api import chave_gpt, chave_ollama
 
 
 def IA(text):
+    # 🛠️ ESTRATÉGIA DO HEADERS (KISS): Idêntico ao seu exemplo convertido que funciona
     try:
-        last_error = None
+        chaves = chave_gpt()
+        agora = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+        print(f"\n================ 🔍 [TRACE REQUISIÇÃO DIRETA GEMINI - {agora}] ================")
+        
+        if "GeminiMVP" in chaves and chaves["GeminiMVP"]:
+            api_key = str(chaves["GeminiMVP"]).strip()
+            
+            # Endpoint oficial v1beta idêntico ao seu cURL
+            url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent'
+            
+            # Passando a chave no cabeçalho exatamente como a ferramenta online gerou
+            headers = {
+                'Content-Type': 'application/json',
+                'X-goog-api-key': api_key,
+            }
+            
+            json_data = {
+                'contents': [
+                    {
+                        'parts': [
+                            {
+                                'text': text, # Injeta o prompt do Raio-X do produto aqui
+                            },
+                        ],
+                    },
+                ],
+            }
+            
+            # Faz o disparo HTTP nativo e limpo
+            resp = requests.post(url, headers=headers, json=json_data, timeout=30)
+            dados_resposta = resp.json()
+            
+            # Validação do retorno estruturado do Google
+            if resp.status_code == 200 and "candidates" in dados_resposta:
+                texto_gerado = dados_resposta["candidates"][0]["content"]["parts"][0]["text"]
+                print("[+] COPIES E RAIO-X GERADOS COM SUCESSO VIA HEADERS DA GOOGLE!")
+                print("========================================================================\n")
+                return texto_gerado.strip()
+            else:
+                print(f"❌ [ERRO SERVIDOR GOOGLE] Status: {resp.status_code} | Payload: {dados_resposta}")
+                print("========================================================================\n")
+                return f"Erro na API do Gemini: {dados_resposta.get('error', {}).get('message', 'Falha de Autenticação / Token Inválido')}"
+        else:
+            print("❌ [ERRO] Chave GeminiMVP ausente no arquivo de chaves.")
+            print("========================================================================\n")
+            return "Erro: Chave GeminiMVP ausente."
+            
+    except Exception as e:
+        print(f"\n❌ ================ [FALHA EXCEÇÃO HTTP GEMINI] ================")
+        print(f"[-] Mensagem do erro bruto: {str(e)}")
+        print("========================================================================\n")
+        return f"Falha na requisição direta: {str(e)}"
 
-        for nome, key in chave_gpt().items():
-            try:
-                client = OpenAI(api_key=key)
 
-                response = client.chat.completions.create(
-                    model="gpt-4o-mini",
-                    messages=[{"role": "user", "content": text}],
-                    temperature=0.3
-                )
-
-                return response.choices[0].message.content.strip()
-
-            except RateLimitError:
-                st.warning(f"Rate limit atingido na key: {nome}")
-                last_error = "rate_limit"
-                continue
-
-            except OpenAIError as e:
-                msg = str(e).lower()
-
-                if "quota" in msg or "insufficient" in msg or "billing" in msg:
-                    st.warning(f"Sem crédito na key: {nome}")
-                    last_error = "sem_credito"
-                    continue
-
-                if "invalid api key" in msg or "authentication" in msg:
-                    st.error(f"API key inválida: {nome} (descartando)")
-                    last_error = "key_invalida"
-                    continue
-
-                st.error(f"Erro inesperado com key {nome} → {e}")
-                last_error = "erro_desconhecido"
-                break
-
-        raise RuntimeError(f"Nenhuma API key válida disponível. Último erro: {last_error}")
-    except RuntimeError: pass
 def Texto_para_json(texto):
     """
     Recebe um texto bruto e extrai as chaves definidas, retornando um dicionário.
@@ -65,6 +82,8 @@ def Texto_para_json(texto):
             valor = valor.replace("'", '')
             dados[chave] = valor
     return dados
+
+
 def json_completo(dados):
     """
     Verifica se todas as chaves obrigatórias estão presentes e não vazias.
@@ -73,6 +92,7 @@ def json_completo(dados):
         if chave not in dados or not str(dados[chave]).strip():
             return False
     return True
+
 
 def OLLAMA_CHAT_IA_jason(id_link, prompt, max_tentativas=5):
     """
@@ -85,7 +105,7 @@ def OLLAMA_CHAT_IA_jason(id_link, prompt, max_tentativas=5):
 
     for tentativa in range(1, max_tentativas + 1):
         processo = subprocess.Popen(
-            [chave_ollama()[0], "run", chave_ollama()[1]],
+            [chave_ollama(), "run", chave_ollama()],
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
@@ -93,7 +113,6 @@ def OLLAMA_CHAT_IA_jason(id_link, prompt, max_tentativas=5):
             encoding="utf-8",
             errors="replace",
             bufsize=1,
-            creationflags=subprocess.CREATE_NO_WINDOW,
             universal_newlines=True
         )
 
@@ -112,7 +131,7 @@ def OLLAMA_CHAT_IA_jason(id_link, prompt, max_tentativas=5):
 
 def OLLAMA_CHAT_IA(prompt):
     processo = subprocess.Popen(
-        [chave_ollama()[0], "run", chave_ollama()[1]], #gemma3:1b  e  llama3.2
+        [chave_ollama(), "run", chave_ollama()], #gemma3:1b  e  llama3.2
         stdin=subprocess.PIPE,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
@@ -120,7 +139,6 @@ def OLLAMA_CHAT_IA(prompt):
         encoding="utf-8",
         errors="replace",
         bufsize=1,
-        creationflags=subprocess.CREATE_NO_WINDOW,
         universal_newlines=True
     )
 

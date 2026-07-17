@@ -5,8 +5,124 @@ import requests
 import pandas as pd
 import streamlit as st
 import math
+import csv
+import os
+import pandas as pd
+import sqlite3
 
 from Minhas_Chaves_Api import chave_api_shopee_afiliado
+
+def sincronizar_busca_com_bancao(df_produtos):
+    """
+    Recebe o DataFrame da API da Shopee e faz o UPSERT direto 
+    na tabela B_DADOS_AFILIADOS do seu Bancão local.
+    """
+    bancao_path = "/home/azuredevfire/api-shopee/Base_Dados_Shopee.db"
+    
+    try:
+        conn = sqlite3.connect(bancao_path)
+        cursor = conn.cursor()
+        
+        itens_inseridos = 0
+        itens_atualizados = 0
+        
+        for _, row in df_produtos.iterrows():
+            item_id = str(row.get("itemId"))
+            shop_id = str(row.get("shopId"))
+            titulo = row.get("productName")
+            imagem = row.get("imageUrl")
+            loja = row.get("shopName")
+            
+            # Formata o valor em string/float limpo da API (ex: "57.99")
+            valor = f"{pd.to_numeric(row.get('price'), errors='coerce'):.2f}"
+            comition = f"{(pd.to_numeric(row.get('commissionRate'), errors='coerce') * 100):.0f}%" if "commissionRate" in row else "0%"
+            
+            # 1. Consulta se o produto já existe nessa Loja
+            cursor.execute(
+                "SELECT VALOR FROM B_DADOS_AFILIADOS WHERE SHOP_ID = ? AND ITEM_ID = ?", 
+                (shop_id, item_id)
+            )
+            resultado = cursor.fetchone()
+            
+            if resultado:
+                valor_atual = resultado[0]
+                # Se o preço mudou ou está zerado, atualiza
+                if valor_atual != valor:
+                    cursor.execute(
+                        """UPDATE B_DADOS_AFILIADOS 
+                           SET TITULO = ?, VALOR = ?, COMITION = ?, IMAGEM = ?, LOJA = ? 
+                           WHERE SHOP_ID = ? AND ITEM_ID = ?""",
+                        (titulo, valor, comition, imagem, loja, shop_id, item_id)
+                    )
+                    itens_atualizados += 1
+            else:
+                # 2. Se não existir, faz a inserção como novo registro de cache
+                cursor.execute(
+                    """INSERT INTO B_DADOS_AFILIADOS 
+                       (ITEM_ID, SHOP_ID, TITULO, IMAGEM, LOJA, VALOR, COMITION, LINK_ORIGINAL, LINK_PUBLICO, LINK_AFILIADO) 
+                       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                    (item_id, shop_id, titulo, imagem, loja, valor, comition, "https://shopee.com.br", "https://shopee.com.br", "https://shopee.com.br")
+                )
+                itens_inseridos += 1
+                
+        conn.commit()
+        conn.close()
+        print(f"[BANÇÃO] Sincronização concluída: {itens_inseridos} novos | {itens_atualizados} atualizados.")
+        
+    except Exception as e:
+        print(f"[BANÇÃO] Erro crítico na sincronização: {e}")
+
+
+
+def exportar_dataframe_para_feed(df_produtos):
+    """
+    Gera o CSV de troca clonando rigorosamente a estrutura, 
+    cabeçalhos e formatação do arquivo oficial de parceiros da Shopee.
+    """
+    feed_path = "/home/azuredevfire/shopee_extrator_pro/feeds/ofertas.csv"
+    
+    try:
+        os.makedirs(os.path.dirname(feed_path), exist_ok=True)
+        
+        # 1. Cria a estrutura com as colunas exatas do cabeçalho oficial
+        df_oficial = pd.DataFrame()
+        
+        df_oficial["Item Id"] = df_produtos["itemId"].astype(str)
+        df_oficial["Item Name"] = df_produtos["productName"]
+        
+        # Formata o preço no padrão brasileiro ("179,99") com aspas implícitas no CSV
+        precos_float = pd.to_numeric(df_produtos["price"], errors='coerce').fillna(0)
+        df_oficial["Price"] = precos_float.apply(lambda x: f"{x:.2f}".replace(".", ","))
+        
+        df_oficial["Sales"] = "0"
+        df_oficial["Nome da loja"] = df_produtos["shopName"]
+        
+        # Formata a taxa de comissão (Ex: "16%")
+        if "commissionRate" in df_produtos.columns:
+            df_oficial["Commission Rate"] = (pd.to_numeric(df_produtos["commissionRate"], errors='coerce') * 100).fillna(0).astype(int).astype(str) + "%"
+        else:
+            df_oficial["Commission Rate"] = "0%"
+            
+        # Formata o valor da comissão (Ex: "R$28,80")
+        if "commissionRate" in df_produtos.columns:
+            comissao_float = precos_float * pd.to_numeric(df_produtos["commissionRate"], errors='coerce').fillna(0)
+            df_oficial["Commission"] = comissao_float.apply(lambda x: f"R${x:.2f}".replace(".", ","))
+        else:
+            df_oficial["Commission"] = "R$0,00"
+            
+        df_oficial["Product Link"] = "https://shopee.com.br"
+        df_oficial["Offer Link"] = "https://s.shopee.com.br"
+        
+        # 2. Verifica se o arquivo já existe para decidir se escreve o cabeçalho
+        file_exists = os.path.isfile(feed_path)
+        
+        # 3. Salva mantendo a compatibilidade estrita
+        df_oficial.to_csv(feed_path, mode="a", index=False, header=not file_exists, encoding="utf-8")
+        print(f"[PADRONIZAÇÃO] Sucesso! {len(df_oficial)} itens gravados no padrão oficial de parceiros.")
+    except Exception as e:
+        print(f"[PADRONIZAÇÃO] Erro ao clonar estrutura oficial: {e}")
+
+
 
 # ===============================
 # CONFIGURAÇÃO DA API
@@ -94,10 +210,19 @@ def GERAR_link_afiliado(shopee_url: str):
     print("[+] HEADERS ENVIADOS:", json.dumps(headers, indent=2))
     print("[+] BODY ENVIADO:", body)
     print("=====================================================")
-    
-    resp = requests.post(URL, headers=headers, data=body, timeout=30)
-    short_link = resp.json()["data"]["generateShortLink"]["shortLink"]
 
+    resp = requests.post(URL, headers=headers, data=body, timeout=30)
+    dados_resposta = resp.json()
+
+    # Rastreamento cirúrgico de erros da API Shopee
+    if "errors" in dados_resposta:
+        print(f"\n❌ [API SHOPEE] Erro retornado pelo servidor: {dados_resposta['errors']}")
+        return shopee_url
+    if "data" not in dados_resposta or dados_resposta["data"] is None:
+        print(f"\n❌ [API SHOPEE] Resposta sem nó data. Payload bruto: {dados_resposta}")
+        return shopee_url
+
+    short_link = dados_resposta["data"]["generateShortLink"]["shortLink"]
     return short_link
 
 def calcular_indice_venda(preco, comissao, preco_max=1000):
@@ -175,7 +300,15 @@ def Api_Shopee(st):
         df["commissionRate"] = pd.to_numeric(df["commissionRate"], errors='coerce')
         df["commissionValue"] = df["price"] * df["commissionRate"]
         df["imagem"] = df["imageUrl"]
+        
+        # Chamada da ponte centralizada
 
+        
+        # === ADICIONE ESTAS DUAS LINHAS AQUI ===
+        sincronizar_busca_com_bancao(df)      # Alimenta o Bancão local
+        exportar_dataframe_para_feed(df)      # Alimenta o CSV de troca
+
+        
         df_filtrado = df[
             (df["price"] >= preco_min) &
             (df["price"] <= preco_max) &
@@ -265,26 +398,36 @@ def Api_Shopee(st):
                 if st.button(f" 🔗 Gerar links Afiliado: {nome1[:15]}...",
                              key=f"btn_{i[0]}",
                              use_container_width=True):
-                    origin_url = f"https://shopee.com.br/product/{int(i[1])}/{int(i[0])}"
+                    
+                    # 🛠️ CORREÇÃO CIRÚRGICA: Força a recuperação fresca dos dados antes de disparar para a API
+                    nome1, link1 = ler_A_CAT(st, i[5], item_id=f"{i[0]}_cat1_click")
+                    nome2, link2 = ler_A_CAT(st, i[6], item_id=f"{i[0]}_cat2_click")
 
+                    origin_url = f"https://shopee.com.br/product/{int(i[1])}/{int(i[0])}"
 
                     from Function import gerar_link_public0_shopee
                     link_pul = gerar_link_public0_shopee(i[2],int(i[1]),int(i[0]))
 
                     link_af = GERAR_link_afiliado(origin_url)
-                    link_ct1 = GERAR_link_afiliado(link1)
-                    link_ct2 = GERAR_link_afiliado(link2)
+                    
+                    # Proteção caso os links venham vazios, evitando passar None para a mutação GraphQL
+                    link_ct1 = GERAR_link_afiliado(link1) if link1 else "https://shopee.com.br"
+                    link_ct2 = GERAR_link_afiliado(link2) if link2 else "https://shopee.com.br"
+                    
                     from Pag_Chats_IA import IA
                     raio_X = IA(RAIO_X_PRODUTO_(link_pul))
+                    
                     #with st.expander('Questiona ia!'):
                         #st.code(RAIO_X_PRODUTO_(link_pul))
                     with st.expander('Descrição Gerada!'):
                         st.write(raio_X)
 
+                    # Garante que grava strings limpas e válidas para nomes de categoria se existirem
+                    nomes_categorias = f"{nome1 if nome1 else 'Geral'},{nome2 if nome2 else 'Diversos'}"
 
                     esc_B_DADOS_AFILIADOS(i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], i[8],
-                                              origin_url,link_pul, link_af, link_ct1, link_ct2,
-                                              f'{nome1},{nome2}',raio_X)
+                                          origin_url, link_pul, link_af, link_ct1, link_ct2,
+                                          nomes_categorias, raio_X)
 
                     st.success("✅ AFILIADOS GERADO: esrito em B_DADOS_AFILIADOS!")
                     st.code(F'AFILIADO = {link_af}')
@@ -343,6 +486,9 @@ def Api_Shopee_LOOP_INFINITO(st):
         df["commissionRate"] = pd.to_numeric(df["commissionRate"], errors='coerce')
         df["commissionValue"] = df["price"] * df["commissionRate"]
         df["imagem"] = df["imageUrl"]
+        
+        # Chamada da ponte centralizada
+        exportar_dataframe_para_feed(df)
 
         df_filtrado = df[
             (df["price"] >= preco_min) &

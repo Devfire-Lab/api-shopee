@@ -1,0 +1,1327 @@
+2026-07-16 21:05:28.520 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+2026-07-16 21:05:44.734 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 795, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 93, in <module>
+    app()
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 16, in app
+    COPY_SIMPLES(st)
+  File "/home/azuredevfire/api-shopee/menu_COPY_SIMPLES.py", line 190, in COPY_SIMPLES
+    cat2 = categoria.replace('[','').replace(']','').split(',')[0]
+           ^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'replace'
+2026-07-16 21:16:22.878 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 795, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 93, in <module>
+    app()
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 16, in app
+    COPY_SIMPLES(st)
+  File "/home/azuredevfire/api-shopee/menu_COPY_SIMPLES.py", line 190, in COPY_SIMPLES
+    if categoria:
+           ^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'replace'
+2026-07-16 21:16:56.010 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 795, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 93, in <module>
+    app()
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 16, in app
+    COPY_SIMPLES(st)
+  File "/home/azuredevfire/api-shopee/menu_COPY_SIMPLES.py", line 190, in COPY_SIMPLES
+    if categoria:
+           ^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'replace'
+  Stopping...
+2026-07-16 21:20:35.609 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+2026-07-16 21:23:17.573 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 795, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 93, in <module>
+    app()
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 12, in app
+    Api_Shopee(st)
+  File "/home/azuredevfire/api-shopee/shopee_api.py", line 405, in Api_Shopee
+    link_ct1 = GERAR_link_afiliado(link1) if link1 else "https://shopee.com.br"
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/shopee_api.py", line 215, in GERAR_link_afiliado
+    short_link = resp.json()["data"]["generateShortLink"]["shortLink"]
+                 ~~~~~~~~~~~^^^^^^^^
+KeyError: 'data'
+2026-07-16 21:23:17.574 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 795, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 93, in <module>
+    app()
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 12, in app
+    Api_Shopee(st)
+  File "/home/azuredevfire/api-shopee/shopee_api.py", line 405, in Api_Shopee
+    link_ct1 = GERAR_link_afiliado(link1) if link1 else "https://shopee.com.br"
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/shopee_api.py", line 215, in GERAR_link_afiliado
+    short_link = resp.json()["data"]["generateShortLink"]["shortLink"]
+                 ~~~~~~~~~~~^^^^^^^^
+KeyError: 'data'
+2026-07-16 21:28:13.762 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 795, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 93, in <module>
+    app()
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 12, in app
+    Api_Shopee(st)
+  File "/home/azuredevfire/api-shopee/shopee_api.py", line 405, in Api_Shopee
+  File "/home/azuredevfire/api-shopee/shopee_api.py", line 215, in GERAR_link_afiliado
+    dados_resposta = resp.json()
+                 ^^^^^^^^^^^^^^^^
+KeyError: 'data'
+2026-07-16 21:28:13.764 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 795, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 93, in <module>
+    app()
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 12, in app
+    Api_Shopee(st)
+  File "/home/azuredevfire/api-shopee/shopee_api.py", line 405, in Api_Shopee
+  File "/home/azuredevfire/api-shopee/shopee_api.py", line 215, in GERAR_link_afiliado
+    dados_resposta = resp.json()
+                 ^^^^^^^^^^^^^^^^
+KeyError: 'data'
+2026-07-16 21:31:04.917 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+2026-07-16 21:51:22.935 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+2026-07-16 21:51:41.930 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 795, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 93, in <module>
+    app()
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 11, in app
+    from shopee_api import Api_Shopee
+  File "/home/azuredevfire/api-shopee/shopee_api.py", line 13, in <module>
+    from Minhas_Chaves_Api import chave_api_shopee_afiliado
+  File "/home/azuredevfire/api-shopee/Minhas_Chaves_Api.py", line 99
+    }
+    ^
+SyntaxError: unmatched '}'
+2026-07-16 21:52:12.598 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 795, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 93, in <module>
+    app()
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 11, in app
+    from shopee_api import Api_Shopee
+  File "/home/azuredevfire/api-shopee/shopee_api.py", line 13, in <module>
+    from Minhas_Chaves_Api import chave_api_shopee_afiliado
+  File "/home/azuredevfire/api-shopee/Minhas_Chaves_Api.py", line 99
+    }
+    ^
+SyntaxError: unmatched '}'
+2026-07-16 21:53:57.406 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 795, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 93, in <module>
+    app()
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 11, in app
+    from shopee_api import Api_Shopee
+  File "/home/azuredevfire/api-shopee/shopee_api.py", line 13, in <module>
+    from Minhas_Chaves_Api import chave_api_shopee_afiliado
+  File "/home/azuredevfire/api-shopee/Minhas_Chaves_Api.py", line 99
+    }
+    ^
+SyntaxError: unmatched '}'
+2026-07-16 21:54:24.891 Port 8503 is not available
+2026-07-16 21:54:41.517 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 795, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 93, in <module>
+    app()
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 11, in app
+    from shopee_api import Api_Shopee
+  File "/home/azuredevfire/api-shopee/shopee_api.py", line 13, in <module>
+    from Minhas_Chaves_Api import chave_api_shopee_afiliado
+  File "/home/azuredevfire/api-shopee/Minhas_Chaves_Api.py", line 99
+    }
+    ^
+SyntaxError: unmatched '}'
+2026-07-16 21:57:03.003 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 795, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 93, in <module>
+    app()
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 15, in app
+    from menu_COPY_SIMPLES import COPY_SIMPLES
+  File "/home/azuredevfire/api-shopee/menu_COPY_SIMPLES.py", line 5, in <module>
+    from shopee_api import Api_Shopee
+  File "/home/azuredevfire/api-shopee/shopee_api.py", line 13, in <module>
+    from Minhas_Chaves_Api import chave_api_shopee_afiliado
+  File "/home/azuredevfire/api-shopee/Minhas_Chaves_Api.py", line 99
+    }
+    ^
+SyntaxError: unmatched '}'
+2026-07-16 21:57:59.164 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+2026-07-16 21:58:14.524 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 795, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 93, in <module>
+    app()
+  File "/home/azuredevfire/api-shopee/App_Streamlit.py", line 11, in app
+    from shopee_api import Api_Shopee
+  File "/home/azuredevfire/api-shopee/shopee_api.py", line 13, in <module>
+    from Minhas_Chaves_Api import chave_api_shopee_afiliado
+  File "/home/azuredevfire/api-shopee/Minhas_Chaves_Api.py", line 99
+    }
+    ^
+SyntaxError: unmatched '}'
+2026-07-16 22:43:14.761 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+/home/azuredevfire/api-shopee/Pag_Chats_IA.py:9: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+2026-07-16 22:47:53.977 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+/home/azuredevfire/api-shopee/Pag_Chats_IA.py:9: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+2026-07-16 22:52:36.844 Port 8503 is not available
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784256553,Signature=7b0017e3fb519d4c54ef2a3ab451db066e88e2e22e6708d9416ab8f7aefbc2fa"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/322279974/19320788815"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784256553,Signature=7b0017e3fb519d4c54ef2a3ab451db066e88e2e22e6708d9416ab8f7aefbc2fa"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/322279974/19320788815"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784256553,Signature=f91f5681f26fd3833669d14df9d60523e1fcdf38aeaae4cac470aa129046bbc4"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784256553,Signature=f91f5681f26fd3833669d14df9d60523e1fcdf38aeaae4cac470aa129046bbc4"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784256554,Signature=24c05682e9880278b61f6c9d73ecc48dda0d247338cd496e691daa603a0dbd61"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784256554,Signature=24c05682e9880278b61f6c9d73ecc48dda0d247338cd496e691daa603a0dbd61"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+
+⚠ [GEMINI] Falha temporária no motor Google, chaveando para OpenAI: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+
+⚠ [GEMINI] Falha temporária no motor Google, chaveando para OpenAI: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784256784,Signature=e920fb52f9678c35b733a3d79221af253aa7182c82d5ee3343dee4afb78a1a69"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/322279974/19320788815"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784256784,Signature=3af166197a5fb1b8cd5de483f4081ba90bc7677275166aaeca6daf39a5fe05c9"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784256785,Signature=0c1126682f0d387061cce674d9760a9c37e589655e59ed5165a097a52ecf002f"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+
+⚠ [GEMINI] Falha temporária no motor Google, chaveando para OpenAI: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784257026,Signature=5abff60981b11cba5fa86c39007d3de325aa374294e5bc42c5c20cd4a4e2a28c"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/322279974/19320788815"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784257026,Signature=5abff60981b11cba5fa86c39007d3de325aa374294e5bc42c5c20cd4a4e2a28c"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/322279974/19320788815"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784257026,Signature=5abff60981b11cba5fa86c39007d3de325aa374294e5bc42c5c20cd4a4e2a28c"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/322279974/19320788815"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784257026,Signature=5abff60981b11cba5fa86c39007d3de325aa374294e5bc42c5c20cd4a4e2a28c"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/322279974/19320788815"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784257026,Signature=cc98134e3f641eff7d333e6bd359c7e3c797c2a1106830cbaab0434239487ff4"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784257026,Signature=cc98134e3f641eff7d333e6bd359c7e3c797c2a1106830cbaab0434239487ff4"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784257026,Signature=cc98134e3f641eff7d333e6bd359c7e3c797c2a1106830cbaab0434239487ff4"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784257026,Signature=cc98134e3f641eff7d333e6bd359c7e3c797c2a1106830cbaab0434239487ff4"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784257026,Signature=cc98134e3f641eff7d333e6bd359c7e3c797c2a1106830cbaab0434239487ff4"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784257026,Signature=cc98134e3f641eff7d333e6bd359c7e3c797c2a1106830cbaab0434239487ff4"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784257026,Signature=cc98134e3f641eff7d333e6bd359c7e3c797c2a1106830cbaab0434239487ff4"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784257027,Signature=b7343c6ec4f4d4a18577017721111f060f9a8497bc56da7e7cfee6b8915d16eb"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+
+⚠ [GEMINI] Falha temporária no motor Google, chaveando para OpenAI: 404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.2026-07-16 23:05:14.779 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+/home/azuredevfire/api-shopee/Pag_Chats_IA.py:9: FutureWarning: 
+
+All support for the `google.generativeai` package has ended. It will no longer be receiving 
+updates or bug fixes. Please switch to the `google.genai` package as soon as possible.
+See README for more details:
+
+https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md
+
+  import google.generativeai as genai
+2026-07-16 23:12:59.948 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+2026-07-16 23:22:26.538 Please replace `st.components.v1.html` with `st.iframe`.
+
+`st.components.v1.html` will be removed after 2026-06-01.
+2026-07-17 11:04:22.738 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+============ [TRACE EM TEMPO REAL DONI]====================
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784300801,Signature=682eaacf5d56143ba00b849c4f26b7126924abd601b938937a95546dea263a91"
+}
+[+] BODY ENVIADO: {"query":"\n    query {\n      productOfferV2(\n        sortType: 1 # N\u00fameros menores = mais precis\u00e3o na busca por keyword, n\u00fameros maiores = mais relev\u00e2ncia/comercial. USE DE 1 A 5\n        listType: 0  # 0 Padr\u00e3o/Todos produtos \u2705 (seu atual)  1  # Produtos em promo\u00e7\u00e3o\n        page: 1\n        limit: 3\n        keyword: \"Notebook\"\n      ) {\n        nodes {\n          itemId\n          shopId\n          shopName\n          price\n          commissionRate\n          productName\n          imageUrl\n          productCatIds\n        }\n      }\n    }\n    "}
+====================================================
+============ [TRACE EM TEMPO REAL DONI]====================
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784300801,Signature=682eaacf5d56143ba00b849c4f26b7126924abd601b938937a95546dea263a91"
+}
+[+] BODY ENVIADO: {"query":"\n    query {\n      productOfferV2(\n        sortType: 1 # N\u00fameros menores = mais precis\u00e3o na busca por keyword, n\u00fameros maiores = mais relev\u00e2ncia/comercial. USE DE 1 A 5\n        listType: 0  # 0 Padr\u00e3o/Todos produtos \u2705 (seu atual)  1  # Produtos em promo\u00e7\u00e3o\n        page: 1\n        limit: 3\n        keyword: \"Notebook\"\n      ) {\n        nodes {\n          itemId\n          shopId\n          shopName\n          price\n          commissionRate\n          productName\n          imageUrl\n          productCatIds\n        }\n      }\n    }\n    "}
+====================================================
+[BANÇÃO] Sincronização concluída: 3 novos | 0 atualizados.
+[PADRONIZAÇÃO] Sucesso! 3 itens gravados no padrão oficial de parceiros.
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784300811,Signature=92a10707271c35cb23a9e4ff413c9430e444637c2309e21a8f5c855836ea7884"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/201011462/23693253926"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784300811,Signature=92a10707271c35cb23a9e4ff413c9430e444637c2309e21a8f5c855836ea7884"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/201011462/23693253926"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784300811,Signature=92a10707271c35cb23a9e4ff413c9430e444637c2309e21a8f5c855836ea7884"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/201011462/23693253926"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784300811,Signature=f788af2cbfd74f16b24f330a8f38ec231d940e152cbaca5b726b8530926a6a2c"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784300812,Signature=b17e918a8d10631f324655984156e5e355259cc66cb029bf35b0c2f10a1d9ac4"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784300812,Signature=8b7ad2004b4c4108f40d4e24bcbc9ea27020136ad3103bc38cad54d85cf1fd35"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784300812,Signature=b17e918a8d10631f324655984156e5e355259cc66cb029bf35b0c2f10a1d9ac4"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784300812,Signature=8b7ad2004b4c4108f40d4e24bcbc9ea27020136ad3103bc38cad54d85cf1fd35"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784300812,Signature=8b7ad2004b4c4108f40d4e24bcbc9ea27020136ad3103bc38cad54d85cf1fd35"
+}2026-07-17 11:24:31.473 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+2026-07-17 11:31:19.304 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784302341,Signature=78c991bbd8493be7799abebc30a33e52d3f70912b95760fafff4764f5a97a095"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/242143171/23595732376"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784302341,Signature=78c991bbd8493be7799abebc30a33e52d3f70912b95760fafff4764f5a97a095"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/242143171/23595732376"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784302341,Signature=78c991bbd8493be7799abebc30a33e52d3f70912b95760fafff4764f5a97a095"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/242143171/23595732376"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784302341,Signature=258cfdfef87d6971205e67ba2a809b39835e47b6560847c7859ad6d2d0adf5bf"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784302341,Signature=258cfdfef87d6971205e67ba2a809b39835e47b6560847c7859ad6d2d0adf5bf"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784302341,Signature=258cfdfef87d6971205e67ba2a809b39835e47b6560847c7859ad6d2d0adf5bf"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784302341,Signature=628ce4a3f32b7523c47aef49082c05bd3f23cfb5cd5c950532f7e13ae6f88e73"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784302341,Signature=628ce4a3f32b7523c47aef49082c05bd3f23cfb5cd5c950532f7e13ae6f88e73"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784302341,Signature=628ce4a3f32b7523c47aef49082c05bd3f23cfb5cd5c950532f7e13ae6f88e73"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br"}}}
+=====================================================
+
+================ 🔍 [TRACE GEMINI EM TEMPO REAL] ================
+[+] CHAVE UTILIZADA: AQ.Ab8RN6L...MmlFw
+[+] TEXTO/PROMPT ENVIADO (Resumo): FAZE 1 ----------------------------------------------------------------------------
+ 
+    
+REGRAS BASICAS PARA IA:--------------------------------
+Não...
+
+================ 🔍 [TRACE GEMINI EM TEMPO REAL] ================
+[+] CHAVE UTILIZADA: AQ.Ab8RN6L...MmlFw
+[+] TEXTO/PROMPT ENVIADO (Resumo): FAZE 1 ----------------------------------------------------------------------------
+ 
+    
+REGRAS BASICAS PARA IA:--------------------------------
+Não...
+
+================ 🔍 [TRACE GEMINI EM TEMPO REAL] ================
+[+] CHAVE UTILIZADA: AQ.Ab8RN6L...MmlFw
+[+] TEXTO/PROMPT ENVIADO (Resumo): FAZE 1 ----------------------------------------------------------------------------
+ 
+    
+REGRAS BASICAS PARA IA:--------------------------------
+Não...
+
+❌ ================ [FALHA CRÍTICA NO GEMINI] ================
+[-] Mensagem do erro: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+[-] Tipo do erro: ClientError
+[-] Traceback detalhado:
+
+❌ ================ [FALHA CRÍTICA NO GEMINI] ================
+[-] Mensagem do erro: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+[-] Tipo do erro: ClientError
+[-] Traceback detalhado:
+Traceback (most recent call last):
+  File "/home/azuredevfire/api-shopee/Pag_Chats_IA.py", line 30, in IA
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/models.py", line 6558, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/models.py", line 4986, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1650, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1443, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1420, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/errors.py", line 184, in raise_error
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+2026-07-17 11:39:30.603 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+2026-07-17 11:43:23.053 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784303027,Signature=e9a25e23a6cce9d1f91d0ffc8756010e3cd52ba1dec41f061938eeb15f3846fc"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/201011462/23693253926"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784303027,Signature=e9a25e23a6cce9d1f91d0ffc8756010e3cd52ba1dec41f061938eeb15f3846fc"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/201011462/23693253926"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784303027,Signature=20e34c35b1a70d3435f5433746ca50765d8da442dcc5c954f65d741310837bd1"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784303027,Signature=20e34c35b1a70d3435f5433746ca50765d8da442dcc5c954f65d741310837bd1"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784303027,Signature=21a0962a0674f90e7f8e0c0a2934db5f9bb0fec3b22fa7f9620973395253f8ee"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784303027,Signature=21a0962a0674f90e7f8e0c0a2934db5f9bb0fec3b22fa7f9620973395253f8ee"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br"}}}
+=====================================================
+
+================ 🔍 [TRACE GEMINI ISOLADO] ================
+[+] CHAVE UTILIZADA: AQ.Ab8RN6L...MmlFw
+[+] TEXTO/PROMPT ENVIADO (Resumo): FAZE 1 ----------------------------------------------------------------------------
+ 
+    
+REGRAS BASICAS PARA IA:--------------------------------
+Não...
+
+================ 🔍 [TRACE GEMINI ISOLADO] ================
+[+] CHAVE UTILIZADA: AQ.Ab8RN6L...MmlFw
+[+] TEXTO/PROMPT ENVIADO (Resumo): FAZE 1 ----------------------------------------------------------------------------
+ 
+    
+REGRAS BASICAS PARA IA:--------------------------------
+Não...
+
+❌ ================ [FALHA ISOLADA NO GEMINI] ================
+[-] Mensagem do erro: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+[-] Tipo do erro: ClientError
+[-] Traceback detalhado:
+
+❌ ================ [FALHA ISOLADA NO GEMINI] ================
+[-] Mensagem do erro: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+[-] Tipo do erro: ClientError
+[-] Traceback detalhado:
+Traceback (most recent call last):
+  File "/home/azuredevfire/api-shopee/Pag_Chats_IA.py", line 27, in IA
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/models.py", line 6558, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/models.py", line 4986, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1650, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1443, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1420, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/errors.py", line 184, in raise_error
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+2026-07-17 11:47:15.994 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+2026-07-17 11:51:26.074 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+2026-07-17 11:52:44.146 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784313838,Signature=c9ffe6842cbfe0502a8a9b129cd277c2159575701fe8be28e21d25cd735cae83"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/201011462/23693253926"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784313838,Signature=0c9705e1290574f1ef52f60e6ba0dcc7b3469af0b8eda9badc602f089830ba96"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784313838,Signature=14ea41401861a2bc13b5133c184ab9954e3904d7ba837e88e5d47f72548e1412"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br"}}}
+=====================================================
+
+================ 🔍 [TRACE GEMINI ISOLADO] ================
+[+] CHAVE UTILIZADA: AQ.Ab8RN6L...MmlFw
+[+] TEXTO/PROMPT ENVIADO (Resumo): FAZE 1 ----------------------------------------------------------------------------
+ 
+    
+REGRAS BASICAS PARA IA:--------------------------------
+Não...
+
+❌ ================ [FALHA ISOLADA NO GEMINI] ================
+[-] Mensagem do erro: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+[-] Tipo do erro: ClientError
+[-] Traceback detalhado:
+Traceback (most recent call last):
+  File "/home/azuredevfire/api-shopee/Pag_Chats_IA.py", line 27, in IA
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/models.py", line 6558, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/models.py", line 4986, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1650, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1443, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1420, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/errors.py", line 184, in raise_error
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+
+==============================================================
+
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784318325,Signature=0ed8aad836166a53c22fe7e9fb4fbba41137978b0f6dbfa307c308dd82c6e56f"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/242143171/23595732376"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784318325,Signature=138a1e479446340801db00648d76a9a20fe43197cc29c91e153f4c24381bfe55"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784318325,Signature=8c239c4b22c9bec8ba4094899d15fc6722b3b59934c7ce6d4c1c926cd583ec7e"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br"}}}
+=====================================================
+
+================ 🔍 [TRACE GEMINI ISOLADO] ================2026-07-17 16:08:02.098 Uvicorn server started on :::8502
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8502
+  Network URL: http://10.0.0.4:8502
+  External URL: http://13.68.190.202:8502
+
+2026-07-17 17:01:54.043 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784322173,Signature=0a44c094a1e9f9b7628bcbd12227a0ccf79cc609aad16dfd78e3a3b2023aa097"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/201011462/23693253926"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784322174,Signature=4bb8b4c9eb71e0cb85f911be794fe7b29e99b38ef4002af942d158b7dd57724a"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784322174,Signature=980a0d1e67363959129e6d2e64efefefed1c9f0f09315ee45550ab90026ee998"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br"}}}
+=====================================================
+
+================ 🔍 [TRACE GEMINI OFICIAL] ================
+[+] CHAVE UTILIZADA: AQ.Ab8RN6L...MmlFw
+
+❌ ================ [FALHA NO GEMINI] ================
+[-] Mensagem do erro: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.', 'status': 'NOT_FOUND'}}
+==========================================================
+
+============ [TRACE EM TEMPO REAL DONI]====================
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784322275,Signature=4ab71d1bef7709ddf06582c43a6a84b4bb2736e7730ca2e19b52872577a78267"
+}
+[+] BODY ENVIADO: {"query":"\n    query {\n      productOfferV2(\n        sortType: 1 # N\u00fameros menores = mais precis\u00e3o na busca por keyword, n\u00fameros maiores = mais relev\u00e2ncia/comercial. USE DE 1 A 5\n        listType: 0  # 0 Padr\u00e3o/Todos produtos \u2705 (seu atual)  1  # Produtos em promo\u00e7\u00e3o\n        page: 1\n        limit: 3\n        keyword: \"Cama\"\n      ) {\n        nodes {\n          itemId\n          shopId\n          shopName\n          price\n          commissionRate\n          productName\n          imageUrl\n          productCatIds\n        }\n      }\n    }\n    "}
+====================================================
+============ [TRACE EM TEMPO REAL DONI]====================
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784322275,Signature=4ab71d1bef7709ddf06582c43a6a84b4bb2736e7730ca2e19b52872577a78267"
+}
+[+] BODY ENVIADO: {"query":"\n    query {\n      productOfferV2(\n        sortType: 1 # N\u00fameros menores = mais precis\u00e3o na busca por keyword, n\u00fameros maiores = mais relev\u00e2ncia/comercial. USE DE 1 A 5\n        listType: 0  # 0 Padr\u00e3o/Todos produtos \u2705 (seu atual)  1  # Produtos em promo\u00e7\u00e3o\n        page: 1\n        limit: 3\n        keyword: \"Cama\"\n      ) {\n        nodes {\n          itemId\n          shopId\n          shopName\n          price\n          commissionRate\n          productName\n          imageUrl\n          productCatIds\n        }\n      }\n    }\n    "}
+====================================================
+[BANÇÃO] Sincronização concluída: 3 novos | 0 atualizados.
+[PADRONIZAÇÃO] Sucesso! 3 itens gravados no padrão oficial de parceiros.
+============ [TRACE EM TEMPO REAL DONI]====================
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784322334,Signature=084269c73f732085f9133dc6ffd42aa546362bb75dcc9986ec621529b213763a"
+}
+[+] BODY ENVIADO: {"query":"\n    query {\n      productOfferV2(\n        sortType: 1 # N\u00fameros menores = mais precis\u00e3o na busca por keyword, n\u00fameros maiores = mais relev\u00e2ncia/comercial. USE DE 1 A 5\n        listType: 0  # 0 Padr\u00e3o/Todos produtos \u2705 (seu atual)  1  # Produtos em promo\u00e7\u00e3o\n        page: 1\n        limit: 3\n        keyword: \"Len\u00e7ol\"\n      ) {\n        nodes {\n          itemId\n          shopId\n          shopName\n          price\n          commissionRate\n          productName\n          imageUrl\n          productCatIds\n        }\n      }\n    }\n    "}
+====================================================
+[BANÇÃO] Sincronização concluída: 3 novos | 0 atualizados.
+[PADRONIZAÇÃO] Sucesso! 3 itens gravados no padrão oficial de parceiros.
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784322341,Signature=d16ead98b5199e606177a6ce97029b77e583ce359682703ff46c5a6255b83271"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/850285667/19999189741"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784322341,Signature=154a20f6d2e0f0930bf52a49ed499077c5bdf13c755666eec8562f44b178bb56"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784322341,Signature=154a20f6d2e0f0930bf52a49ed499077c5bdf13c755666eec8562f44b178bb56"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]2026-07-17 17:12:09.876 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+============ [TRACE EM TEMPO REAL DONI]====================
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784322761,Signature=5ed35697f6dd292dbd5cb3c6edbb0ea6699dc641974e63812ec425596040104e"
+}
+[+] BODY ENVIADO: {"query":"\n    query {\n      productOfferV2(\n        sortType: 1 # N\u00fameros menores = mais precis\u00e3o na busca por keyword, n\u00fameros maiores = mais relev\u00e2ncia/comercial. USE DE 1 A 5\n        listType: 0  # 0 Padr\u00e3o/Todos produtos \u2705 (seu atual)  1  # Produtos em promo\u00e7\u00e3o\n        page: 1\n        limit: 3\n        keyword: \"Monitor\"\n      ) {\n        nodes {\n          itemId\n          shopId\n          shopName\n          price\n          commissionRate\n          productName\n          imageUrl\n          productCatIds\n        }\n      }\n    }\n    "}
+====================================================
+============ [TRACE EM TEMPO REAL DONI]====================
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784322761,Signature=5ed35697f6dd292dbd5cb3c6edbb0ea6699dc641974e63812ec425596040104e"
+}
+[+] BODY ENVIADO: {"query":"\n    query {\n      productOfferV2(\n        sortType: 1 # N\u00fameros menores = mais precis\u00e3o na busca por keyword, n\u00fameros maiores = mais relev\u00e2ncia/comercial. USE DE 1 A 5\n        listType: 0  # 0 Padr\u00e3o/Todos produtos \u2705 (seu atual)  1  # Produtos em promo\u00e7\u00e3o\n        page: 1\n        limit: 3\n        keyword: \"Monitor\"\n      ) {\n        nodes {\n          itemId\n          shopId\n          shopName\n          price\n          commissionRate\n          productName\n          imageUrl\n          productCatIds\n        }\n      }\n    }\n    "}
+====================================================
+[BANÇÃO] Sincronização concluída: 3 novos | 0 atualizados.
+[PADRONIZAÇÃO] Sucesso! 3 itens gravados no padrão oficial de parceiros.
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784322766,Signature=1d7497c481b534af214373045ca153060dc668e040cfcc2d3f0c1888d996a759"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br/product/1766915313/58214282382"}}}
+=====================================================
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784322766,Signature=f994c982d363dc50bd7e128f7ca8e0fc0645ce51e607b72822c97904b1217be7"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"Vazio"}}}
+=====================================================
+
+❌ [API SHOPEE] Erro retornado pelo servidor: [{'message': 'error [11001]: Params Error : invalid origin url', 'path': ['generateShortLink'], 'extensions': {'code': 11001, 'message': 'Params Error : invalid origin url'}}]
+============== [TRACE EM TEMPO REAL DONI] =============
+[+] URL REAL DE DESTINO: https://open-api.affiliate.shopee.com.br/graphql
+[+] HEADERS ENVIADOS: {
+  "Content-Type": "application/json",
+  "Authorization": "SHA256 Credential=18323300326,Timestamp=1784322766,Signature=9239fcd2b3e95ed35373b18c05d7732e65a21862b775bb771a8b5af64ec1bc63"
+}
+[+] BODY ENVIADO: {"query":"\n    mutation GenerateShortLink($input: ShortLinkInput!) {\n      generateShortLink(input: $input) {\n        shortLink\n      }\n    }\n    ","variables":{"input":{"originUrl":"https://shopee.com.br"}}}
+=====================================================
+
+================ 🔍 [TRACE VERIFICADOR DONI - 17/07/2026 17:12:50 - CÓDIGO: GEMINI-1.5-V3] ================
+[+] Chave recuperada com sucesso: AQ.Ab8RN6L...
+
+❌ ================ [FALHA AUDITADA NO GEMINI ÀS 17:12:50] ================
+[-] Mensagem do erro bruto enviado pelo servidor: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+[-] Tipo do erro: ClientError
+[-] Traceback detalhado da execução:
+Traceback (most recent call last):
+  File "/home/azuredevfire/api-shopee/Pag_Chats_IA.py", line 30, in IA
+    response = client.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/models.py", line 6558, in generate_content
+    response = self._generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/models.py", line 4986, in _generate_content
+    response = self._api_client.request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1650, in request
+    response = self._request(http_request, http_options, stream=False)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1443, in _request
+    return self._retry(self._request_once, http_request, stream)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 371, in iter
+    result = action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 413, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 184, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/tenacity/__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/_api_client.py", line 1420, in _request_once
+    errors.APIError.raise_for_response(response)
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/errors.py", line 155, in raise_for_response
+    cls.raise_error(response.status_code, response_json, response)
+  File "/home/azuredevfire/api-shopee/.venv/lib/python3.12/site-packages/google/genai/errors.py", line 184, in raise_error
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+
+========================================================================
+2026-07-17 18:09:30.245 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+2026-07-17 18:12:03.095 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+2026-07-17 18:15:05.132 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+2026-07-17 18:17:39.976 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
+2026-07-17 18:29:42.880 Uvicorn server started on :::8503
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8503
+  Network URL: http://10.0.0.4:8503
+  External URL: http://13.68.190.202:8503
+
